@@ -22,31 +22,13 @@ $(document).ready(function () {
 
 
 //( jquery ) make onsavebtn click run a function inside of that function have cosole.log to veryfay that fuction run
-
-type = "text/javascript"
-$(document).ready(function () {
-    $("#Button1").click(function () {
-        $.ajax({
-            type: 'POST',
-            contentType: "application/json;charset=utf-8",
-            url: 'Default2.aspx/InsertMethod',
-            data: "{'username':'" + document.getElementById('txtusername').value + "','password':'" + document.getElementById("txtpassword").value + "'}",
-            async: false,
-            success: function (response) {
-                $('#txtusername').val('');
-                $('#txtpassword').val('');
-                alert("record has been saved in database");
-
-            },
-            error: function () {
-                console.log('there is some error');
-            }
-
-        });
-
-    });
-
-});
+var value=i;//global variable  
+function (){  
+alert(value);  
+}  
+function b(){  
+alert(value);  
+}  
 
 
 
