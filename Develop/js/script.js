@@ -22,18 +22,13 @@ $(document).ready(function () {
 
 
 //( jquery ) make onsavebtn click run a function inside of that function have cosole.log to veryfay that fuction run
-var value=i;//global variable  
-function (){  
-alert(value);  
-}  
-function b(){  
-alert(value);  
-}  
 
+$( ".saveBtn" ).click(function(e) {
+    console.log(e.target);
+    console.log($(this).siblings('.textSave').val());
+    localStorage.setItem($(this).siblings('.textSave').attr('id'), $(this).siblings('.textSave').val());
 
-
-
-
-
+    alert( "Handler for .click() called." );
+  });
 // get value from spesific text box with "this" function 
 // lastly stor that value into lolcalstorage
